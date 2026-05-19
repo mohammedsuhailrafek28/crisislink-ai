@@ -17,7 +17,12 @@
 - [x] Added auth controller/service for register, login, and current-user lookup
 - [x] Added user controller/service for profile, search, follow, and unfollow
 - [x] Added DTO validation and JWT/local strategies
-- [ ] Wire frontend login/signup screens to the new backend endpoints
+- [x] Wire frontend login/signup screens to the new backend endpoints
+- [x] Add auth gate + profile-completion flow for new accounts
+- [x] Wire the profile tab to edit backend profile fields and sign out
+- [x] Add avatar upload for profile photo
+- [x] Normalize shared avatar rendering across the app
+- [x] Surface the uploaded avatar in the feed header
 - [ ] Add a backend seed or migration for first-time local setup
 
 ### Backend Tasks
@@ -36,12 +41,15 @@
 - [ ] Test all endpoints with Postman/Swagger
 
 ### Frontend Tasks
-- [ ] Connect signup screen to `POST /auth/register`
-- [ ] Connect login screen to `POST /auth/login`
-- [ ] Implement JWT token storage in Zustand + SecureStore
-- [ ] Create auth gate (redirect unauthed users to login)
-- [ ] Create profile completion flow (5-step wizard)
-- [ ] Display logged-in user info in header/profile
+- [x] Connect signup screen to `POST /auth/register`
+- [x] Connect login screen to `POST /auth/login`
+- [x] Implement JWT token storage in Zustand + SecureStore
+- [x] Create auth gate (redirect unauthed users to login)
+- [x] Create profile completion flow (lightweight onboarding screen)
+- [x] Display logged-in user info in header/profile
+- [x] Upload and render profile photo from the profile tab
+- [x] Reuse a shared avatar component that prefers `profilePhoto` and falls back to initials
+- [x] Show the signed-in user avatar and name in the feed shell
 - [ ] Test end-to-end signup → login → home flow
 
 ### Database Tasks
@@ -59,15 +67,20 @@
 
 ---
 
-## 📅 PHASE 2: Social Feed (COMING NEXT)
+## 📅 PHASE 2: Social Feed (IN PROGRESS)
 
-- [ ] Post entity implementation
-- [ ] Create post endpoint with image upload
-- [ ] Feed infinite scroll endpoint
-- [ ] Like/unlike endpoints
-- [ ] Comment endpoints
-- [ ] Frontend post creation modal
-- [ ] Frontend feed UI with infinite scroll
+- [x] Post entity with user relation and metadata
+- [x] PostLike and Comment entities
+- [x] Create post endpoint (POST /api/v1/feed) with JWT guard
+- [x] Feed infinite scroll endpoint (GET /api/v1/feed?page=X&limit=20)
+- [x] Like/unlike endpoints (POST /api/v1/feed/:id/like, /unlike)
+- [x] Frontend post creation screen (Create tab fully functional)
+- [x] Frontend feed display with user avatars and like/comment counts
+- [x] Infinite scroll integration with TanStack React Query
+- [ ] Comment creation and display
+- [ ] Post deletion by author
+- [ ] Post editing
+- [ ] Repost/share functionality
 
 ---
 
