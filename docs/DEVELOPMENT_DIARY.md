@@ -92,3 +92,12 @@
 
 **Status:** Ready to begin backend implementation with clear roadmap and prioritized features
 
+### Phase 1 Kickoff: Backend Auth + User Model
+
+- Added PostgreSQL-backed `User` entity with profile fields and follow relations
+- Added `AuthController` and `AuthService` for register/login/me
+- Added `UsersController` and `UsersService` for profile update, search, follow, and unfollow
+- Added JWT and local passport strategies
+- Added DTO validation for register, login, profile update, and user search
+- Ran a backend build check; it still fails in older unrelated modules, but the new auth/user slice is clean
+

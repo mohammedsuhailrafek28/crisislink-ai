@@ -12,6 +12,14 @@
 
 ## 🔄 PHASE 1: Core Auth & User Management (PRIORITY NOW)
 
+### Progress
+- [x] Added PostgreSQL `User` entity
+- [x] Added auth controller/service for register, login, and current-user lookup
+- [x] Added user controller/service for profile, search, follow, and unfollow
+- [x] Added DTO validation and JWT/local strategies
+- [ ] Wire frontend login/signup screens to the new backend endpoints
+- [ ] Add a backend seed or migration for first-time local setup
+
 ### Backend Tasks
 - [ ] Create User entity with all fields (email, password_hash, fullName, bio, profilePhoto, talentType, city, country, verified, etc.)
 - [ ] Create password hashing utility (bcrypt)
