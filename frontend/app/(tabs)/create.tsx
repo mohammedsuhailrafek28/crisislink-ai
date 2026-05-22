@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 import { useRouter } from 'expo-router';
 import { useCreatePost } from '../../src/hooks/useFeed';
-import { COLORS } from '@/constants/theme';
+import { COLORS } from '../../src/constants/theme';
 
 export default function CreateScreen() {
   const router = useRouter();

@@ -3,7 +3,7 @@ import { useRouter } from 'expo-router';
 import { useFeed } from '../../src/hooks/useFeed';
 import { useAuthStore } from '../../src/store/auth.store';
 import { Avatar } from '../../src/components';
-import { COLORS } from '@/constants/theme';
+import { COLORS } from '../../src/constants/theme';
 
 export default function FeedScreen() {
   const router = useRouter();
